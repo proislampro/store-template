@@ -1,0 +1,33 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.menu {
+    background: #222;
+    padding: 15px;
+}
+
+.menu ul {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    position: relative; /* Needed for directional positioning */
+    transition: all 0.3s ease; /* Smooths out the slide effect */
+}
+
+/* Target the links directly using your data attributes */
+.menu a[data-direction="left"]:hover {
+    transform: translateX(-5px);
+}
+
+.menu a[data-direction="right"]:hover {
+    transform: translateX(5px);
+}

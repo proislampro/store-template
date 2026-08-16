@@ -4,7 +4,7 @@ import path from 'path';
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-// Set EJS as the view engine
+// EJS
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, '../views'));
 
@@ -15,11 +15,17 @@ app.use(express.json());
 
 // Routes
 app.get('/', (req, res) => {
-  res.render('index', { title: 'Home' , StoreName: 'My Store' });
+  res.render('index', {
+    title: 'Home',
+    StoreName: 'My Store'
+  });
 });
 
 app.get('/about', (req, res) => {
-  res.render('about', { title: 'About' , StoreName: 'My Store' });
+  res.render('about', {
+    title: 'About',
+    StoreName: 'My Store'
+  });
 });
 
 // Start server
