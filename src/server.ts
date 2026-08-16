@@ -15,11 +15,11 @@ app.use(express.json());
 
 // Routes
 app.get('/', (req, res) => {
-  res.render('index', { title: 'Home' });
+  res.render('index', { title: 'Home' , StoreName: 'My Store' });
 });
 
 app.get('/about', (req, res) => {
-  res.render('about', { title: 'About' });
+  res.render('about', { title: 'About' , StoreName: 'My Store' });
 });
 
 // Start server

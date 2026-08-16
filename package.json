@@ -15,7 +15,9 @@
   "type": "commonjs",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "tsx watch src/server.ts",
+    "dev": "nodemon --ext ts,tsx,ejs,css,js,json --exec tsx src/server.ts"
   },
   "dependencies": {
     "@prisma/client": "^7.9.1",
@@ -27,6 +29,7 @@
     "@types/ejs": "^3.1.5",
     "@types/express": "^5.0.6",
     "@types/node": "^26.2.0",
+    "nodemon": "^3.1.14",
     "prisma": "^7.9.1",
     "tsx": "^4.23.12",
     "typescript": "^7.0.2"
