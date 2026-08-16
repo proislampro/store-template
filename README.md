@@ -1,0 +1,2 @@
+# store-template
+Store Template
