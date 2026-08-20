@@ -5,7 +5,7 @@ body {
 
 .menu {
     background: #222;
-    padding: 15px;
+    padding: 0 15px;
 }
 
 .menu ul {
@@ -16,18 +16,22 @@ body {
     padding: 0;
 }
 
+/* ONLY target the right item. It pushes itself to the right edge */
+.menu ul :has(a[data-direction="right"]) {
+    margin-left: auto;
+}
+
+/* REMOVED: The code for data-direction="left" was deleted here */
+
 .menu a {
     color: white;
     text-decoration: none;
-    position: relative; /* Needed for directional positioning */
-    transition: all 0.3s ease; /* Smooths out the slide effect */
+    position: relative;
+    transition: all 0.3s ease;
+    padding: 15px 5px;
+    display: inline-block; 
 }
 
-/* Target the links directly using your data attributes */
-.menu a[data-direction="left"]:hover {
-    transform: translateX(-5px);
-}
-
-.menu a[data-direction="right"]:hover {
-    transform: translateX(5px);
+.menu a:hover {
+    background-color: #444;
 }
